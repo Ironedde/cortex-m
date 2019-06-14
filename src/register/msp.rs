@@ -26,7 +26,7 @@ pub fn read() -> u32 {
 }
 
 /// Writes `bits` to the CPU register
-#[inline]
+#[inline(always)]
 pub unsafe fn write(_bits: u32) {
     match () {
         #[cfg(all(cortex_m, feature = "inline-asm"))]
